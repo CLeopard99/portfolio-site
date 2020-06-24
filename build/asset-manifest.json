@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/my-site/static/css/main.e6e3581b.chunk.css",
+    "main.js": "/my-site/static/js/main.f75dcb6b.chunk.js",
+    "main.js.map": "/my-site/static/js/main.f75dcb6b.chunk.js.map",
+    "runtime-main.js": "/my-site/static/js/runtime-main.72ed8bde.js",
+    "runtime-main.js.map": "/my-site/static/js/runtime-main.72ed8bde.js.map",
+    "static/js/2.f2e1ed09.chunk.js": "/my-site/static/js/2.f2e1ed09.chunk.js",
+    "static/js/2.f2e1ed09.chunk.js.map": "/my-site/static/js/2.f2e1ed09.chunk.js.map",
+    "index.html": "/my-site/index.html",
+    "precache-manifest.60f09d270f8b961653edc221e6daf35b.js": "/my-site/precache-manifest.60f09d270f8b961653edc221e6daf35b.js",
+    "service-worker.js": "/my-site/service-worker.js",
+    "static/css/main.e6e3581b.chunk.css.map": "/my-site/static/css/main.e6e3581b.chunk.css.map",
+    "static/js/2.f2e1ed09.chunk.js.LICENSE.txt": "/my-site/static/js/2.f2e1ed09.chunk.js.LICENSE.txt",
+    "static/media/CharlieLeopard_Resume.pdf": "/my-site/static/media/CharlieLeopard_Resume.16a92d08.pdf",
+    "static/media/mySite.jpg": "/my-site/static/media/mySite.7aff805f.jpg",
+    "static/media/mymemoryScreenshots.png": "/my-site/static/media/mymemoryScreenshots.b1e441a9.png",
+    "static/media/profilePhoto.png": "/my-site/static/media/profilePhoto.c8a5cbf9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72ed8bde.js",
+    "static/js/2.f2e1ed09.chunk.js",
+    "static/css/main.e6e3581b.chunk.css",
+    "static/js/main.f75dcb6b.chunk.js"
+  ]
+}
