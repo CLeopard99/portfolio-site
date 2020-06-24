@@ -1,0 +1,49 @@
+{
+  "homepage": "http://cleopard99.github.io/my-site",
+  "name": "my-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material/textfield": "^6.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "git": "^0.1.5",
+    "react": "^16.13.1",
+    "react-collapsible": "^2.8.0",
+    "react-dom": "^16.13.1",
+    "react-mailto": "^0.4.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-scroll": "^1.7.16",
+    "react-sticky": "^6.0.3",
+    "semantic-ui-react": "^0.88.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
