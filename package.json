@@ -1,5 +1,5 @@
 {
-  "homepage": "http://cleopard99.github.io/my-site",
+  "homepage": "http://cleopard99.github.io/my-site/index.html",
   "name": "my-site",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
-    "git": "^0.1.5",
     "react": "^16.13.1",
     "react-collapsible": "^2.8.0",
     "react-dom": "^16.13.1",
