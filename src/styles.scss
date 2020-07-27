@@ -1,0 +1,588 @@
+@import '../node_modules/react-modal-video/scss/modal-video.scss';
+
+/****Default background and text****/
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  background-color: white;
+  font-family: "Lato";
+  max-width: 100%;
+}
+/****Default heading settings ****/
+h1,
+h2 {
+  font-family: "Montserrat";
+  font-size: 32px;
+}
+h3 {
+  font-family: "Montserrat";
+  font-size: 20px;
+  margin: 5px;
+  margin-bottom: 30px;
+}
+/****Ensure images do not exceed page width****/
+img {
+  max-width: 100%;
+}
+
+/****NavBar/Header styles****/
+.header {
+  opacity: 0.9;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  color: black;
+  height: 70px;
+  width: 100%;
+  z-index: 1000;
+}
+ul.navBar li {
+  display: inline;
+}
+ul.navBar {
+  padding: 0;
+  float: left;
+  margin-left: 75px;
+}
+ul.navBar li a {
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px 15px 0 0;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 16px;
+  cursor: pointer;
+}
+ul.navBar li a:hover {
+  color: steelblue;
+}
+.header h2 {
+  float: left;
+  margin-left: 25px;
+}
+#nav2 {
+  display: none;
+}
+.active {
+  color: steelblue;
+  border-bottom: 1px #4682b4 solid;
+}
+
+/****Home section styles (split into welcome message and profile image sides)****/
+#homeSection {
+  margin-bottom: 200px;
+}
+#profile {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+}
+/****welcome message****/
+#welcomeMessage {
+  text-align: center;
+  align-content: center;
+  margin-bottom: 25px;
+}
+#welcomeMessage p {
+  margin: auto;
+  margin-right: 25px;
+  font-size: 18px;
+  max-width: 400px;
+}
+/* profile image*/
+#homeImage {
+  align-self: center;
+  height: 200px;
+  margin-top: 15px;
+}
+/****Home section Buttons****/
+#welcomeButtons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+}
+#welcomeButtons a {
+  border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 20px;
+  padding: 8px 0;
+  width: 200px;
+}
+#cvButton {
+  background-color: #add8e6;
+  border: black 1px solid;
+}
+#cvButton:hover {
+  background-color: #69f7f2;
+}
+#contactButton {
+  background-color: #d8f7d8;
+  border: black 1px solid;
+}
+#contactButton:hover {
+  background-color: #adff2f;
+}
+
+/**** About section****/
+#aboutSection {
+  display: flex;
+  background-color: rgb(241, 238, 238);
+  padding-bottom: 20px;
+}
+#aboutSection p {
+   margin-bottom: 50px;
+}
+/**** Used for highlighted summaries of sections ****/
+.sectionBlurb {
+  margin: auto;
+  width: 65%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(216, 247, 216);
+}
+/**** About me section title ***/
+#sectionTitle {
+  display: flex;
+  padding: 30px;
+  background-color: rgb(241, 238, 238);
+}
+#sectionTitle h2 {
+  margin: auto;
+}
+
+/****Icons for education and skills sections****/
+#skillImage {
+  height: 75px;
+  margin-top: 25px;
+}
+#eduImage {
+  height: 100px;
+}
+/****Education and skills section formatting****/
+#educationSection {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#skillSection {
+  width: 50%;
+  text-align: center;
+  border-left: 2px solid black;
+  margin-bottom: 20px;
+}
+
+/****react-collapsible component (Accordion)****/
+.qualificationsAccordion {
+  width: 75%;
+  min-width: 360px;
+  margin: auto;
+  background-color: white;
+  text-align: left;
+}
+/*Accordion header/trigger*/
+.qualificationsAccordion__trigger {
+  display: block;
+  font-weight: bold;
+  position: relative;
+  border: 1px solid black;
+  padding: 15px;
+  background: lightblue;
+  cursor: pointer;
+}
+/*Closed accordion*/
+.qualificationsAccordion ::after {
+  content: "\002B";
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  transition: transform 300ms;
+  font-size: 23px;
+}
+/*Change symbol when opened*/
+.qualificationsAccordion .is-open:after {
+  content: "\002D";
+}
+/*Textbox (content)*/
+.qualificationsAccordion__contentInner {
+  padding: 10px;
+  border: 1px solid black;
+  border-top: 0px;
+}
+.qualificationsAccordion li {
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+/****List of skills in skill section****/
+.skillsList {
+  display: flex;
+  width: 75%;
+  padding-bottom: 25px;
+  margin: auto;
+  border-top: 1px solid black;
+  min-height: 80px;
+}
+/****Skill category header****/
+.skillCategory h3 {
+  display: flex;
+  width: 90px;
+  margin-right: 35px;
+}
+/****SkillTab component****/
+.skillTab {
+  background-color: #add8e6;
+  padding: 3px 10px;
+  border: 1px silver solid;
+  border-radius: 8px;
+  margin: 10px 8px 0 0;
+  float: left;
+}
+
+/****Portfolio/Project section****/
+#projects {
+  text-align: center;
+  padding-bottom: 50px;
+}
+/****Highlighted text to caption sections****/
+.sectionBlurb {
+  margin: auto;
+  width: 65%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(216, 247, 216);
+}
+
+/****Project section styles****/
+#projectsHeader {
+  padding-top: 75px;
+  padding-bottom: 30px;
+}
+#projectImage {
+  width: 600px;
+  max-width: 90%;
+}
+#projectContainer {
+  height: auto;
+  width: 100%;
+  margin-top: 75px;
+}
+#projectContainer p {
+  width: 675px;
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 75%;
+}
+.projectTech {
+  font-size: 18px;
+  color: steelblue;
+}
+#buttonsContainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+#buttonsContainer a {
+  width: 100px;
+  background-color: white;;
+  border: #252934 2px solid;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 30px 15px 30px;
+}
+#buttonsContainer a:hover {
+  background-color: rgb(216, 247, 216);
+}
+
+/****More section styles****/
+#moreSection {
+  text-align: center;
+  width: 100%;
+}
+/*Photo collage section, image, and text*/
+#collage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  padding-bottom: 50px;
+  margin: auto;
+}
+#headerCollage {
+  width: 100%;
+  min-width: 900px;
+}
+#collageText {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+#collage h2 {
+  position: absolute;
+  top: 25%;
+  font-size: 35px;
+}
+#collage p {
+  position: absolute;
+  top: 27%;
+  font-size: 32px;
+  margin-top: 80px;
+  width: 75%;
+}
+/*Hoverboxes for extracurricular sections*/
+#hoverBoxes {
+  margin-top: 100px;
+}
+.subSection {
+  display: inline-block;
+  width: 25%;
+  height: 460px;
+  text-align: center;
+  margin: auto;
+}
+.subSectionIcon {
+  width: 150px;
+  max-width: 60%;
+  padding: 100px 20px 20px 20px;
+}
+/*On-hover containers and animation*/
+.hoverContainer {
+  position: relative;
+  height: 100%;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+.hoverContainer:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+.overlayText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 85%;
+}
+/*Interest section*/
+#interests {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin: 100px 50px;
+}
+/*Interests text*/
+#interestsList {
+  padding-top: 10px;
+  width: 230px;
+}
+/*Interest icon collage*/
+#interestCollage {
+  height: 300px;
+  margin-left: 75px;
+}
+
+/****Contact section styles****/
+#contactMe {
+  text-align: center;
+  height: 600px;
+  background-color: #252934;
+  color: rgb(241, 238, 238);
+  margin-top: 150px;
+  padding-top: 200px;
+}
+#contactHeader p {
+  margin: auto;
+  margin-top: 60px;
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+}
+#contactLine {
+  border-top: 2px solid rgb(241, 238, 238);
+}
+#emailButton {
+  margin: auto;
+  text-align: center;
+  margin: 100px;
+}
+#emailButton a {
+  background-color: rgb(241, 238, 238);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 50px;
+  padding: 15px 30px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px white solid;
+}
+#emailButton a:hover {
+  background-color: rgb(216, 247, 216);
+}
+
+hr {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.clear {
+  clear: both;
+}
+.divider {
+  height: 1px;
+  width: 50%;
+  border-top: 1px solid white;
+  margin: auto;
+}
+
+/*Main colours*/
+.pastelBlue {
+  background-color: #add8e6;
+}
+.pastelGreen {
+  background-color: #d8f7d8;
+}
+.pastelPink {
+  background-color: #ffeffd;
+}
+.pastelOrange {
+  background-color: #fbe5d6;
+}
+
+/****Change header to CL****/
+@media only screen and (max-width: 820px) {
+  #nav1 {
+    display: none;
+  }
+  #nav2 {
+    display: flex;
+  }
+}
+/****Website vertical mode****/
+@media only screen and (max-width: 780px) {
+  #profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  #welcomeButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  #aboutSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  #sectionTitle {
+    border-bottom: 1px solid silver;
+  }
+  #skillSection {
+    padding: 60px 0;
+    border: 0px;
+    width: 100%;
+  }
+  #educationSection {
+    border-bottom: 1px solid silver;
+    padding: 60px 0;
+    width: 100%;
+  }
+  .subSection {
+    width: 50%;
+    height: 500px;
+  }
+  #profile {
+    padding-top: 60px;
+  }
+}
+/****Change header for smaller views****/
+@media only screen and (max-width: 610px) {
+  h2 {
+    font-size: 30px;
+  }
+  #nav2 {
+    display: none;
+  }
+  #nav1 {
+    display: flex;
+    justify-content: center;
+   
+  }
+  ul.navBar {
+    margin: 15px 10px;
+    float: none;
+    text-align: center;
+
+  }
+  ul.navBar li a {
+    margin: 0px 10px 0px 0px;
+    padding-top: 0px;
+  }
+  .header {
+    height: 85px;
+    position: sticky;
+    top: 0;
+  }
+  .header h2{
+   display: flex;
+   justify-content: center;
+   float: none;
+    text-align: center;
+    margin: 15px 0px 10px 0px;
+  }
+  #welcomeMessage p {
+    width: 350px;
+    margin-right: 0px;
+  }
+  #contactHeader p {
+    width: 60%;
+  }
+  #contactMe {
+    height: 630px;
+  }
+  #emailButton {
+    margin: 100px 0px;
+  }
+}
+/****Make interests section vertical****/
+@media only screen and (max-width: 540px) {
+  #interests {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #interestCollage {
+    margin: 0px;
+    margin-top: 50px;
+  }
+  #contactMe {
+    height: 650px;
+  }
+}
+
