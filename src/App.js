@@ -8,11 +8,11 @@ import More from "./components/More";
 import Contact from "./components/Contact";
 
 // Main class used to render core components
-
 function App() {
   return (
     <div>
        <NavBar />
+
        <Element id="/">
           <Home />
         </Element>

@@ -17,12 +17,12 @@ class VideoButton extends Component {
 
   render() {
     return (
-        <div id="buttonsContainer">
+        <div id="projectButton">
         <ModalVideo channel={this.props.channel} isOpen={this.state.isOpen} videoId={this.props.videoId} autoplay='false' onClose={() => this.setState({isOpen: false})} />
         <a onClick={this.openModal}>Watch Demo</a>
       </div>
     );
   }
 }
-
+ 
 export default VideoButton;

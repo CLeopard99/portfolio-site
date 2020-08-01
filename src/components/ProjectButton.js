@@ -5,7 +5,7 @@ class ProjectButton extends Component {
 
   render() {
     return (
-      <div id="buttonsContainer">
+      <div id="projectButton">
         <a href={this.props.link}>
           View Code
         </a>

@@ -1,4 +1,4 @@
-@import '../node_modules/react-modal-video/scss/modal-video.scss';
+@import "../node_modules/react-modal-video/scss/modal-video.scss";
 
 /****Default background and text****/
 html,
@@ -69,41 +69,38 @@ ul.navBar li a:hover {
   color: steelblue;
   border-bottom: 1px #4682b4 solid;
 }
-
+/*****Particles background animation****/
+#particlesContainer {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
 /****Home section styles (split into welcome message and profile image sides)****/
 #homeSection {
-  margin-bottom: 200px;
-}
-#profile {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: 100px;
+  position: relative;
+  text-align: center;
+  height: 700px;
+  background-color: #252934;
+  color: white;
 }
 /****welcome message****/
 #welcomeMessage {
-  text-align: center;
-  align-content: center;
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  width: 100%;
 }
-#welcomeMessage p {
-  margin: auto;
-  margin-right: 25px;
+#welcomeText {
   font-size: 18px;
   max-width: 400px;
-}
-/* profile image*/
-#homeImage {
-  align-self: center;
-  height: 200px;
-  margin-top: 15px;
+  padding: 10px;
 }
 /****Home section Buttons****/
 #welcomeButtons {
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin-top: 70px;
+  margin-bottom: 130px;
 }
 #welcomeButtons a {
   border-radius: 30px;
@@ -112,23 +109,42 @@ ul.navBar li a:hover {
   color: black;
   font-weight: bold;
   text-decoration: none;
-  margin: 15px 20px;
+  margin: 10px 20px;
   padding: 8px 0;
-  width: 200px;
+  width: 180px;
+  position: relative;
 }
 #cvButton {
   background-color: #add8e6;
-  border: black 1px solid;
+  border: white 1px solid;
 }
 #cvButton:hover {
   background-color: #69f7f2;
 }
 #contactButton {
   background-color: #d8f7d8;
-  border: black 1px solid;
+  border: white 1px solid;
 }
 #contactButton:hover {
   background-color: #adff2f;
+}
+#learnMoreButton {
+  display: flex;
+  justify-content: center;
+}
+#learnMoreButton a {
+  width: 100px;
+  background-color: #252934;
+  border: white 2px solid;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  padding: 15px 30px;
+  position: relative;
+}
+#learnMoreButton a:hover {
+  border: #69f7f2 2px solid;
+  color: #69f7f2;
 }
 
 /**** About section****/
@@ -138,7 +154,7 @@ ul.navBar li a:hover {
   padding-bottom: 20px;
 }
 #aboutSection p {
-   margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 /**** Used for highlighted summaries of sections ****/
 .sectionBlurb {
@@ -227,15 +243,15 @@ ul.navBar li a:hover {
 .skillsList {
   display: flex;
   width: 75%;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   margin: auto;
   border-top: 1px solid black;
-  min-height: 80px;
+  min-height: 90px;
 }
 /****Skill category header****/
 .skillCategory h3 {
   display: flex;
-  width: 90px;
+  width: 110px;
   margin-right: 35px;
 }
 /****SkillTab component****/
@@ -246,6 +262,7 @@ ul.navBar li a:hover {
   border-radius: 8px;
   margin: 10px 8px 0 0;
   float: left;
+  width: auto;
 }
 
 /****Portfolio/Project section****/
@@ -289,25 +306,24 @@ ul.navBar li a:hover {
   font-size: 18px;
   color: steelblue;
 }
-#buttonsContainer {
+#projectButton {
   display: flex;
   justify-content: center;
-  margin: auto;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 100px;
 }
-#buttonsContainer a {
+#projectButton a {
   width: 100px;
-  background-color: white;;
+  background-color: white;
   border: #252934 2px solid;
   cursor: pointer;
   color: black;
   font-weight: bold;
   text-decoration: none;
-  padding: 15px 30px 15px 30px;
+  padding: 15px 30px;
 }
-#buttonsContainer a:hover {
+#projectButton a:hover {
   background-color: rgb(216, 247, 216);
 }
 
@@ -488,10 +504,6 @@ hr {
 }
 /****Website vertical mode****/
 @media only screen and (max-width: 780px) {
-  #profile {
-    flex-direction: column;
-    align-items: center;
-  }
   #welcomeButtons {
     flex-direction: column;
     align-items: center;
@@ -532,13 +544,11 @@ hr {
   #nav1 {
     display: flex;
     justify-content: center;
-   
   }
   ul.navBar {
     margin: 15px 10px;
     float: none;
     text-align: center;
-
   }
   ul.navBar li a {
     margin: 0px 10px 0px 0px;
@@ -549,10 +559,10 @@ hr {
     position: sticky;
     top: 0;
   }
-  .header h2{
-   display: flex;
-   justify-content: center;
-   float: none;
+  .header h2 {
+    display: flex;
+    justify-content: center;
+    float: none;
     text-align: center;
     margin: 15px 0px 10px 0px;
   }
@@ -585,4 +595,3 @@ hr {
     height: 650px;
   }
 }
-
