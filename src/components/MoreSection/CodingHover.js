@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import codingIcon from "../assets/codingIcon.png";
+import codingIcon from "../../assets/codingIcon.png";
 
 class CodingHover extends Component {
   render() {

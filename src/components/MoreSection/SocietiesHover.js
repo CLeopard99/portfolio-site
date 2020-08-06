@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import societiesIcon from "../assets/groupIcon.png";
+import societiesIcon from "../../assets/groupIcon.png";
 
 class SocietiesHover extends Component {
   render() {

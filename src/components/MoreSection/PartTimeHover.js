@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import uniformIcon from "../assets/uniformIcon.png";
+import uniformIcon from "../../assets/uniformIcon.png";
 
 class PartTimeHover extends Component {
   render() {

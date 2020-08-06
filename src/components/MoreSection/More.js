@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import HeaderCollage from "../assets/collageHeader.png";
-import InterestCollage from "../assets/interestCollage.png";
+import HeaderCollage from "../../assets/collageHeader.png";
+import InterestCollage from "../../assets/interestCollage.png";
 
 import CodingHover from "./CodingHover";
 import SocietiesHover from "./SocietiesHover";

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-scroll";
-import ProfilePhoto from "../assets/profilePhoto.png";
-import CV from "../documents/CharlieLeopard_Resume.pdf";
+import CV from "../../documents/Charlie-Leopard-Resume.pdf";
 import Particles from "./Particles";
 
 class Home extends Component {

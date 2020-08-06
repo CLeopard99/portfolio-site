@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SkillTab from "./SkillTab";
-import SkillsImage from "../assets/skillsImage.png";
+import SkillsImage from "../../assets/skillsImage.png";
 
 // Skill section to render summary of hard skills as a responsive list of tabs by category
 class Skills extends Component {

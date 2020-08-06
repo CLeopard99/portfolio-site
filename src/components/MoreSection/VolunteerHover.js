@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import volunteerIcon from "../assets/volunteerIcon.png";
+import volunteerIcon from "../../assets/volunteerIcon.png";
 
 class VolunteerHover extends Component {
   render() {

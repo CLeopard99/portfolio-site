@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Project from "./Project";
 import VideoButton from "./VideoButton";
 import ProjectButton from "./ProjectButton";
-import MyMemoryShots from "../assets/mymemoryScreenshots.png";
-import MyPortfolio from "../assets/portfolioExample.png";
+import MyMemoryShots from "../../assets/mymemoryScreenshots.png";
+import MyPortfolio from "../../assets/portfolioExample.png";
 
 // Portfolio renders projects by setting the necessary details needed
 class Portfolio extends Component {
