@@ -16,8 +16,8 @@ class SocietiesHover extends Component {
             <div className="overlayText">
               <h3>Societies</h3>
               <p>
-                Committee member of craft beer & cider society (includes organising
-                weekly social events and trips, promoting activities,
+                Committee member of craft beer & cider society (includes
+                organising weekly social events and trips, promoting activities,
                 recruitment, and safety)
               </p>
               <div className="divider" />

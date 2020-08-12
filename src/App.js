@@ -8,7 +8,7 @@ import More from "./components/MoreSection/More";
 import Contact from "./components/ContactSection/Contact";
 
 // Main class used to render core components
-function App() {
+function App() {  
   return (
     <div>
       <NavBar />

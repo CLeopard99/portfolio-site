@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import EducationSection from "./Education";
 import SkillSection from "./Skills";
+import ScrollAnimation from "react-animate-on-scroll";
 
-// About me section to render Education section and Skills section 
+// About me section to render Education section and Skills section
 class About extends Component {
   render() {
     return (
       <div>
         <div id="sectionTitle">
-          <h2>About me</h2>
+          <ScrollAnimation animateIn="slideInRight" 
+          offset="800"  animateOnce={true}>
+            <h2>About me</h2>
+          </ScrollAnimation>
         </div>
-
+ 
         <div id="aboutSection">
-          <EducationSection/>
-          <SkillSection/>
+          <EducationSection />
+          <SkillSection />
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 @import "../node_modules/react-modal-video/scss/modal-video.scss";
 
 /****Default background and text****/
-html,
+
 body {
   margin: 0px;
   padding: 0px;
@@ -9,6 +9,7 @@ body {
   background-color: white;
   font-family: "Lato";
   max-width: 100%;
+  overflow-x: hidden;
 }
 /****Default heading settings ****/
 h1,
@@ -171,6 +172,7 @@ ul.navBar li a:hover {
 #sectionTitle {
   display: flex;
   padding: 30px;
+  justify-content: center;
   background-color: rgb(241, 238, 238);
 }
 #sectionTitle h2 {
@@ -215,20 +217,23 @@ ul.navBar li a:hover {
   padding: 15px;
   background: lightblue;
   cursor: pointer;
+
+  &:after {
+    content: "\002B";
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    transition: transform 300ms;
+    font-size: 23px;
+  }
+
+  &.is-open {
+    &:after {
+      content: "\002D";
+    }
+  }
 }
-/*Closed accordion*/
-.qualificationsAccordion ::after {
-  content: "\002B";
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  transition: transform 300ms;
-  font-size: 23px;
-}
-/*Change symbol when opened*/
-.qualificationsAccordion .is-open:after {
-  content: "\002D";
-}
+
 /*Textbox (content)*/
 .qualificationsAccordion__contentInner {
   padding: 10px;
@@ -352,14 +357,14 @@ ul.navBar li a:hover {
 }
 #collage h2 {
   position: absolute;
-  top: 25%;
-  font-size: 35px;
+  top: 27%;
+  font-size: 50px;
 }
 #collage p {
   position: absolute;
-  top: 27%;
-  font-size: 32px;
-  margin-top: 80px;
+  top: 30%;
+  font-size: 40px;
+  margin-top:  100px;
   width: 75%;
 }
 /*Hoverboxes for extracurricular sections*/
@@ -379,7 +384,7 @@ ul.navBar li a:hover {
   padding: 100px 20px 20px 20px;
 }
 /*On-hover containers and animation*/
-.hoverContainer {
+.hoverContainer {  
   position: relative;
   height: 100%;
 }
@@ -501,6 +506,15 @@ hr {
   #nav2 {
     display: flex;
   }
+  #collage h2 {
+    top: 25%;
+    font-size: 35px;
+  }
+  #collage p {
+    top: 27%;
+    font-size: 32px;
+    margin-top: 80px;
+  }
 }
 /****Website vertical mode****/
 @media only screen and (max-width: 780px) {
@@ -527,7 +541,7 @@ hr {
   }
   .subSection {
     width: 50%;
-    height: 500px;
+    height: 450px;
   }
   #profile {
     padding-top: 60px;
