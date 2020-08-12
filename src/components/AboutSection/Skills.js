@@ -10,7 +10,6 @@ class Skills extends Component {
       <div id="skillSection">
         <ScrollAnimation
           animateIn="fadeInRight"
-          offset="400"
           animateOnce={true}
         >
           <img src={SkillsImage} id="skillImage" alt="Skills Icon" />

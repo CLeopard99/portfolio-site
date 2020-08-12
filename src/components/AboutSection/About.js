@@ -9,8 +9,7 @@ class About extends Component {
     return (
       <div>
         <div id="sectionTitle">
-          <ScrollAnimation animateIn="slideInRight" 
-          offset="800"  animateOnce={true}>
+          <ScrollAnimation animateIn="slideInRight" animateOnce={true}>
             <h2>About me</h2>
           </ScrollAnimation>
         </div>

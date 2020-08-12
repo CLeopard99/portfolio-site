@@ -10,7 +10,6 @@ class Education extends Component {
       <div id="educationSection">
         <ScrollAnimation
           animateIn="fadeInLeft"
-          offset="400"
           animateOnce={true}
         >
           <img src={EduImage} id="eduImage" alt="Education Icon" />

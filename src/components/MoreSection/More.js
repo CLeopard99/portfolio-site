@@ -25,11 +25,7 @@ class More extends Component {
   render() {
     return (
       <div id="moreSection">
-        <ScrollAnimation
-          animateIn="slideInLeft"
-          offset="700"
-          animateOnce={true}
-        >
+        <ScrollAnimation animateIn="slideInLeft" animateOnce={true}>
           <div id="collage">
             <img
               src={HeaderCollage}
@@ -45,11 +41,7 @@ class More extends Component {
           </div>
         </ScrollAnimation>
 
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          offset="700"
-          animateOnce={true}
-        >
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
           <h2>In my spare time...</h2>
           <p className="sectionBlurb pastelBlue">
             Soft skills are just as important as programming ability and my
@@ -60,7 +52,7 @@ class More extends Component {
           </p>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="zoomIn" offset="700" animateOnce={true}>
+        <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
           <div id="hoverBoxes">
             <CodingHover />
             <SocietiesHover />
@@ -70,11 +62,7 @@ class More extends Component {
         </ScrollAnimation>
 
         <div id="interests">
-          <ScrollAnimation
-            animateIn="fadeInLeft"
-            offset="600"
-            animateOnce={true}
-          >
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
             <div id="interestsList">
               <h3>Some of my interests include</h3>
               <p> HCI & ubiquitous technologies</p>
@@ -85,11 +73,7 @@ class More extends Component {
               <p>Travelling</p>
             </div>
           </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="fadeInRight"
-            offset="600"
-            animateOnce={true}
-          >
+          <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
             <img
               src={InterestCollage}
               id="interestCollage"

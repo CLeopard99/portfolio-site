@@ -11,11 +11,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div id="projects">
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          offset="800"
-          animateOnce={true}
-        >
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
           <div id="projectsHeader">
             <h2>Projects</h2>
             <p className="sectionBlurb">

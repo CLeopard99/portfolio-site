@@ -7,7 +7,7 @@ class Project extends Component {
     return (
       <div id="projectContainer">
         <div>
-          <ScrollAnimation animateIn="zoomIn" offset="800" animateOnce={true}>
+          <ScrollAnimation animateIn="zoomIn"  animateOnce={true}>
             <h2>{this.props.title}</h2>
 
             <p className="projectTech">
@@ -15,7 +15,7 @@ class Project extends Component {
             </p>
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn="slideInLeft" offset="800" delay="200" animateOnce={true}>
+          <ScrollAnimation animateIn="slideInLeft" animateOnce={true}>
             <p>{this.props.summary}</p>
 
             <img

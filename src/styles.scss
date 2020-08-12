@@ -9,6 +9,7 @@ body {
   background-color: white;
   font-family: "Lato";
   max-width: 100%;
+  text-align: center;
   overflow-x: hidden;
 }
 /****Default heading settings ****/
@@ -344,7 +345,7 @@ ul.navBar li a:hover {
   overflow: hidden;
   color: white;
   padding-bottom: 50px;
-  margin: auto;
+  margin: auto; 
 }
 #headerCollage {
   width: 100%;
@@ -352,8 +353,9 @@ ul.navBar li a:hover {
 }
 #collageText {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: auto;
+  
 }
 #collage h2 {
   position: absolute;
@@ -607,5 +609,24 @@ hr {
   }
   #contactMe {
     height: 650px;
+  }
+}
+
+ /* IE10+ CSS */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #collageText {
+    display: block;
+    align-self: center;
+    color: black;
+  }
+  #collage h2 {
+    position: relative;
+    font-size: 35px;
+  }
+  #collage p {
+    position: relative;
+    font-size: 32px;
+    margin-top:  0px;
+    margin:auto;
   }
 }

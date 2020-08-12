@@ -18,13 +18,7 @@ class VideoButton extends Component {
 
   render() {
     return (
-      <ScrollAnimation
-        animateIn="slideInUp"
-        offset="900"
-        delay="100"
-        animateOnce={true}
-      >
-
+      <ScrollAnimation animateIn="slideInUp" animateOnce={true}>
         <div id="projectButton">
           <ModalVideo
             channel={this.props.channel}
@@ -35,7 +29,6 @@ class VideoButton extends Component {
           />
           <a onClick={this.openModal}>Watch Demo</a>
         </div>
-
       </ScrollAnimation>
     );
   }

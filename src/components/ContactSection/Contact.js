@@ -9,20 +9,18 @@ class Contact extends Component {
         <div id="contactMe">
           <ScrollAnimation
             animateIn="fadeInLeft"
-            offset="900"
             animateOnce={true}
           >
             <h2>Contact Me</h2>
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="fadeInRight"
-            offset="900"
             animateOnce={true}
           >
             <p id="contactLine">Have a question or want to hire me?</p>
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn="zoomIn" offset="900" animateOnce={true}>
+          <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
             <EmailButton />
             <p>Charles.Leopard@outlook.com</p>
           </ScrollAnimation>
