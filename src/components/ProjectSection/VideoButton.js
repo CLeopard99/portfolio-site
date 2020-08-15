@@ -18,18 +18,18 @@ class VideoButton extends Component {
 
   render() {
     return (
-      <ScrollAnimation animateIn="slideInUp" animateOnce={true}>
-        <div id="projectButton">
-          <ModalVideo
-            channel={this.props.channel}
-            isOpen={this.state.isOpen}
-            videoId={this.props.videoId}
-            autoplay="false"
-            onClose={() => this.setState({ isOpen: false })}
-          />
+      <div id="projectButton">
+        <ModalVideo
+          channel={this.props.channel}
+          isOpen={this.state.isOpen}
+          videoId={this.props.videoId}
+          autoplay="false"
+          onClose={() => this.setState({ isOpen: false })}
+        />
+        <ScrollAnimation animateIn="slideInUp" animateOnce={true}>
           <a onClick={this.openModal}>Watch Demo</a>
-        </div>
-      </ScrollAnimation>
+        </ScrollAnimation>
+      </div>
     );
   }
 }

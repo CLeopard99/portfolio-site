@@ -14,7 +14,7 @@ class ParticlesRender extends Component {
                 value: "#20DF0A",
               },
               opacity: {
-                value: 0.7,
+                value: 0.8,
               },
               number: {
                 value: 120,
@@ -28,7 +28,7 @@ class ParticlesRender extends Component {
               line_linked: {
                 distance: 130,
                 color: "#0ABBDF",
-                opacity: 0.4,
+                opacity: 0.6,
                 width: 1,
               },
               move: {

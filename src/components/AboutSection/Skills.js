@@ -43,6 +43,8 @@ class Skills extends Component {
               <SkillTab skill="React" />
               <SkillTab skill="React Native" />
               <SkillTab skill="NodeJS" />
+              <SkillTab skill="SASS/LESS" />
+              <SkillTab skill="Bootstrap" />
               <SkillTab skill="JUnit" />
             </div>
           </div>

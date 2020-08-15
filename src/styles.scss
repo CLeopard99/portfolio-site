@@ -1,7 +1,6 @@
 @import "../node_modules/react-modal-video/scss/modal-video.scss";
 
 /****Default background and text****/
-
 body {
   margin: 0px;
   padding: 0px;
@@ -12,18 +11,21 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+
 /****Default heading settings ****/
 h1,
 h2 {
   font-family: "Montserrat";
   font-size: 32px;
 }
+
 h3 {
   font-family: "Montserrat";
   font-size: 20px;
   margin: 5px;
   margin-bottom: 30px;
 }
+
 /****Ensure images do not exceed page width****/
 img {
   max-width: 100%;
@@ -39,44 +41,52 @@ img {
   height: 70px;
   width: 100%;
   z-index: 1000;
+
+  h2 {
+    float: left;
+    margin-left: 25px;
+  }
 }
-ul.navBar li {
-  display: inline;
-}
+
 ul.navBar {
+  li {
+    display: inline;
+
+    a {
+      font-weight: bold;
+      padding: 10px;
+      margin: 10px 15px 0 0;
+      display: inline-block;
+      font-family: "Montserrat";
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        color: steelblue;
+      }
+    }
+  }
   padding: 0;
   float: left;
   margin-left: 75px;
 }
-ul.navBar li a {
-  font-weight: bold;
-  padding: 10px;
-  margin: 10px 15px 0 0;
-  display: inline-block;
-  font-family: "Montserrat";
-  font-size: 16px;
-  cursor: pointer;
-}
-ul.navBar li a:hover {
-  color: steelblue;
-}
-.header h2 {
-  float: left;
-  margin-left: 25px;
-}
+
 #nav2 {
   display: none;
 }
+
 .active {
   color: steelblue;
   border-bottom: 1px #4682b4 solid;
 }
+
 /*****Particles background animation****/
 #particlesContainer {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 700px;
 }
+
 /****Home section styles (split into welcome message and profile image sides)****/
 #homeSection {
   position: relative;
@@ -85,79 +95,90 @@ ul.navBar li a:hover {
   background-color: #252934;
   color: white;
 }
+
 /****welcome message****/
 #welcomeMessage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 70px;
   width: 100%;
 }
+
 #welcomeText {
   font-size: 18px;
   max-width: 400px;
-  padding: 10px;
 }
+
 /****Home section Buttons****/
 #welcomeButtons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 130px;
+  margin-bottom: 135px;
+
+  a {
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 20px;
+    padding: 8px 0;
+    width: 180px;
+    position: relative;
+    border: white 1px solid;
+  }
 }
-#welcomeButtons a {
-  border-radius: 30px;
-  display: inline-block;
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 10px 20px;
-  padding: 8px 0;
-  width: 180px;
-  position: relative;
-}
+
 #cvButton {
   background-color: #add8e6;
-  border: white 1px solid;
+
+  &:hover {
+    background-color: #69f7f2;
+  }
 }
-#cvButton:hover {
-  background-color: #69f7f2;
-}
+
 #contactButton {
   background-color: #d8f7d8;
-  border: white 1px solid;
+
+  &:hover {
+    background-color: #adff2f;
+  }
 }
-#contactButton:hover {
-  background-color: #adff2f;
-}
+
 #learnMoreButton {
   display: flex;
   justify-content: center;
-}
-#learnMoreButton a {
-  width: 100px;
-  background-color: #252934;
-  border: white 2px solid;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-  padding: 15px 30px;
-  position: relative;
-}
-#learnMoreButton a:hover {
-  border: #69f7f2 2px solid;
-  color: #69f7f2;
+
+  a {
+    width: 100px;
+    background-color: #252934;
+    border: white 2px solid;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px 30px;
+
+    &:hover {
+      border: #69f7f2 2px solid;
+      color: #69f7f2;
+    }
+  }
 }
 
 /**** About section****/
+
 #aboutSection {
   display: flex;
   background-color: rgb(241, 238, 238);
   padding-bottom: 20px;
+
+  p {
+    margin-bottom: 50px;
+  }
 }
-#aboutSection p {
-  margin-bottom: 50px;
-}
+
 /**** Used for highlighted summaries of sections ****/
 .sectionBlurb {
   margin: auto;
@@ -169,15 +190,17 @@ ul.navBar li a:hover {
   border-radius: 20px;
   background-color: rgb(216, 247, 216);
 }
+
 /**** About me section title ***/
 #sectionTitle {
   display: flex;
   padding: 30px;
   justify-content: center;
   background-color: rgb(241, 238, 238);
-}
-#sectionTitle h2 {
-  margin: auto;
+
+  h2 {
+    margin: auto;
+  }
 }
 
 /****Icons for education and skills sections****/
@@ -185,9 +208,11 @@ ul.navBar li a:hover {
   height: 75px;
   margin-top: 25px;
 }
+
 #eduImage {
   height: 100px;
 }
+
 /****Education and skills section formatting****/
 #educationSection {
   width: 50%;
@@ -208,7 +233,13 @@ ul.navBar li a:hover {
   margin: auto;
   background-color: white;
   text-align: left;
+
+  li {
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
 }
+
 /*Accordion header/trigger*/
 .qualificationsAccordion__trigger {
   display: block;
@@ -241,10 +272,7 @@ ul.navBar li a:hover {
   border: 1px solid black;
   border-top: 0px;
 }
-.qualificationsAccordion li {
-  margin-bottom: 10px;
-  padding-right: 10px;
-}
+
 /****List of skills in skill section****/
 .skillsList {
   display: flex;
@@ -254,12 +282,14 @@ ul.navBar li a:hover {
   border-top: 1px solid black;
   min-height: 90px;
 }
+
 /****Skill category header****/
 .skillCategory h3 {
   display: flex;
   width: 110px;
   margin-right: 35px;
 }
+
 /****SkillTab component****/
 .skillTab {
   background-color: #add8e6;
@@ -268,7 +298,6 @@ ul.navBar li a:hover {
   border-radius: 8px;
   margin: 10px 8px 0 0;
   float: left;
-  width: auto;
 }
 
 /****Portfolio/Project section****/
@@ -276,6 +305,7 @@ ul.navBar li a:hover {
   text-align: center;
   padding-bottom: 50px;
 }
+
 /****Highlighted text to caption sections****/
 .sectionBlurb {
   margin: auto;
@@ -283,7 +313,6 @@ ul.navBar li a:hover {
   max-width: 600px;
   padding: 10px;
   font-size: 17px;
-  padding: 10px;
   border-radius: 20px;
   background-color: rgb(216, 247, 216);
 }
@@ -293,44 +322,51 @@ ul.navBar li a:hover {
   padding-top: 75px;
   padding-bottom: 30px;
 }
+
 #projectImage {
   width: 600px;
   max-width: 90%;
 }
+
 #projectContainer {
   height: auto;
   width: 100%;
   margin-top: 75px;
+
+  p {
+    width: 675px;
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 75%;
+  }
 }
-#projectContainer p {
-  width: 675px;
-  margin: auto;
-  margin-bottom: 30px;
-  max-width: 75%;
-}
+
 .projectTech {
   font-size: 18px;
   color: steelblue;
 }
+
 #projectButton {
   display: flex;
   justify-content: center;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 100px;
-}
-#projectButton a {
-  width: 100px;
-  background-color: white;
-  border: #252934 2px solid;
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 15px 30px;
-}
-#projectButton a:hover {
-  background-color: rgb(216, 247, 216);
+
+  a {
+    width: 100px;
+    background-color: white;
+    border: #252934 2px solid;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px;
+
+    &:hover {
+      background-color: rgb(216, 247, 216);
+    }
+  }
 }
 
 /****More section styles****/
@@ -338,6 +374,7 @@ ul.navBar li a:hover {
   text-align: center;
   width: 100%;
 }
+
 /*Photo collage section, image, and text*/
 #collage {
   position: relative;
@@ -345,34 +382,39 @@ ul.navBar li a:hover {
   overflow: hidden;
   color: white;
   padding-bottom: 50px;
-  margin: auto; 
+  margin: auto;
+
+  h2 {
+    position: absolute;
+    top: 27%;
+    font-size: 50px;
+  }
+
+  p {
+    position: absolute;
+    top: 30%;
+    font-size: 40px;
+    margin-top: 100px;
+    width: 75%;
+  }
 }
+
 #headerCollage {
   width: 100%;
   min-width: 900px;
 }
+
 #collageText {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
-#collage h2 {
-  position: absolute;
-  top: 27%;
-  font-size: 50px;
-}
-#collage p {
-  position: absolute;
-  top: 30%;
-  font-size: 40px;
-  margin-top:  100px;
-  width: 75%;
-}
+
 /*Hoverboxes for extracurricular sections*/
 #hoverBoxes {
   margin-top: 100px;
 }
+
 .subSection {
   display: inline-block;
   width: 25%;
@@ -380,16 +422,24 @@ ul.navBar li a:hover {
   text-align: center;
   margin: auto;
 }
+
 .subSectionIcon {
   width: 150px;
   max-width: 60%;
   padding: 100px 20px 20px 20px;
 }
+
 /*On-hover containers and animation*/
-.hoverContainer {  
+.hoverContainer {
   position: relative;
   height: 100%;
 }
+
+.hoverContainer:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
 .overlay {
   position: absolute;
   bottom: 100%;
@@ -399,10 +449,7 @@ ul.navBar li a:hover {
   height: 0;
   transition: 0.5s ease;
 }
-.hoverContainer:hover .overlay {
-  bottom: 0;
-  height: 100%;
-}
+
 .overlayText {
   color: white;
   position: absolute;
@@ -414,6 +461,7 @@ ul.navBar li a:hover {
   text-align: center;
   width: 85%;
 }
+
 /*Interest section*/
 #interests {
   display: flex;
@@ -421,11 +469,13 @@ ul.navBar li a:hover {
   text-align: left;
   margin: 100px 50px;
 }
+
 /*Interests text*/
 #interestsList {
   padding-top: 10px;
   width: 230px;
 }
+
 /*Interest icon collage*/
 #interestCollage {
   height: 300px;
@@ -434,6 +484,8 @@ ul.navBar li a:hover {
 
 /****Contact section styles****/
 #contactMe {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   height: 600px;
   background-color: #252934;
@@ -441,44 +493,48 @@ ul.navBar li a:hover {
   margin-top: 150px;
   padding-top: 200px;
 }
-#contactHeader p {
-  margin: auto;
-  margin-top: 60px;
-  width: 50%;
-  padding: 10px;
-  font-size: 18px;
-}
+
 #contactLine {
   border-top: 2px solid rgb(241, 238, 238);
+  margin: auto;
+    margin-top: 60px;
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
 }
+
 #emailButton {
   margin: auto;
   text-align: center;
   margin: 100px;
-}
-#emailButton a {
-  background-color: rgb(241, 238, 238);
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 50px;
-  padding: 15px 30px;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px white solid;
-}
-#emailButton a:hover {
-  background-color: rgb(216, 247, 216);
+
+  a {
+    background-color: rgb(241, 238, 238);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 50px;
+    padding: 15px 30px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px white solid;
+
+    &:hover {
+      background-color: rgb(216, 247, 216);
+    }
+  }
 }
 
 hr {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
 .clear {
   clear: both;
 }
+
 .divider {
   height: 1px;
   width: 50%;
@@ -500,102 +556,118 @@ hr {
   background-color: #fbe5d6;
 }
 
-/****Change header to CL****/
-@media only screen and (max-width: 820px) {
+/****Website vertical mode****/
+@media only screen and (max-width: 840px) {
   #nav1 {
     display: none;
   }
+
   #nav2 {
     display: flex;
   }
-  #collage h2 {
-    top: 25%;
-    font-size: 35px;
-  }
-  #collage p {
-    top: 27%;
-    font-size: 32px;
-    margin-top: 80px;
-  }
-}
-/****Website vertical mode****/
-@media only screen and (max-width: 780px) {
-  #welcomeButtons {
-    flex-direction: column;
-    align-items: center;
-  }
+
   #aboutSection {
     flex-direction: column;
     align-items: center;
-  }
+  }  
+
   #sectionTitle {
     border-bottom: 1px solid silver;
   }
+
   #skillSection {
     padding: 60px 0;
     border: 0px;
     width: 100%;
   }
+
   #educationSection {
     border-bottom: 1px solid silver;
     padding: 60px 0;
     width: 100%;
   }
+
   .subSection {
     width: 50%;
     height: 450px;
   }
+
   #profile {
     padding-top: 60px;
   }
+
+  #collage {
+    h2 {
+      top: 25%;
+      font-size: 35px;
+    }
+
+    p {
+      top: 27%;
+      font-size: 32px;
+      margin-top: 80px;
+    }
+  }
 }
+
 /****Change header for smaller views****/
 @media only screen and (max-width: 610px) {
   h2 {
     font-size: 30px;
   }
+
   #nav2 {
     display: none;
   }
+
   #nav1 {
     display: flex;
     justify-content: center;
   }
+
   ul.navBar {
-    margin: 15px 10px;
+    margin: 15px 5px;
     float: none;
     text-align: center;
+
+    li a {
+      margin: 0px 5px 0px 0px;
+      padding-top: 0px;
+    }
   }
-  ul.navBar li a {
-    margin: 0px 10px 0px 0px;
-    padding-top: 0px;
-  }
+
   .header {
     height: 85px;
     position: sticky;
     top: 0;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      float: none;
+      text-align: center;
+      margin: 15px 0px 10px 0px;
+    }
   }
-  .header h2 {
-    display: flex;
-    justify-content: center;
-    float: none;
-    text-align: center;
-    margin: 15px 0px 10px 0px;
-  }
+
   #welcomeMessage p {
     width: 350px;
     margin-right: 0px;
   }
+
   #contactHeader p {
     width: 60%;
   }
+
   #contactMe {
     height: 630px;
   }
+
   #emailButton {
     margin: 100px 0px;
   }
 }
+
 /****Make interests section vertical****/
 @media only screen and (max-width: 540px) {
   #interests {
@@ -603,30 +675,36 @@ hr {
     align-items: center;
     text-align: center;
   }
+
   #interestCollage {
     margin: 0px;
     margin-top: 50px;
   }
+
   #contactMe {
     height: 650px;
   }
 }
 
- /* IE10+ CSS */
+/* IE10+ CSS */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   #collageText {
     display: block;
     align-self: center;
     color: black;
   }
-  #collage h2 {
-    position: relative;
-    font-size: 35px;
-  }
-  #collage p {
-    position: relative;
-    font-size: 32px;
-    margin-top:  0px;
-    margin:auto;
+
+  #collage {
+    h2 {
+      position: relative;
+      font-size: 35px;
+    }
+
+    p {
+      position: relative;
+      font-size: 32px;
+      margin-top: 0px;
+      margin: auto;
+    }
   }
 }

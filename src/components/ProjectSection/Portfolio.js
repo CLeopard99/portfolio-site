@@ -44,9 +44,9 @@ class Portfolio extends Component {
 
         <Project
           title="Portfolio Site"
-          tech="React / CSS / Node"
+          tech="React / SCSS / Node"
           summary=" To showcase my skills and projects, I have built this responsive website, hosted on Firebase and built with
-          React and CSS. This an ongoing project that will evolve as my career and skills develop."
+          React and SCSS. This an ongoing project that will evolve as my career and skills develop."
           image={MyPortfolio}
           alt="Screenshots of this site, desktop and mobile"
         />
