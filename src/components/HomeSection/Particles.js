@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
 
+// Particles.js parameters for HomeSection
 class ParticlesRender extends Component {
   render() {
     return (
+      <div id="particlesContainer">
         <Particles
           id="particles"
-          width={'100%'}
-          height= '700px'
+          width={"100%"}
+          height="700px"
           params={{
             particles: {
               color: {
@@ -23,7 +25,7 @@ class ParticlesRender extends Component {
                 value: 3,
               },
               shape: {
-                  type: "circle"
+                type: "circle",
               },
               line_linked: {
                 distance: 130,
@@ -46,18 +48,19 @@ class ParticlesRender extends Component {
             interactivity: {
               events: {
                 onClick: {
-                    enable: true,
-                    mode: "push",
-                  },
+                  enable: true,
+                  mode: "push",
+                },
                 onhover: {
                   enable: true,
                   mode: "repulse",
-                  distance: 50
+                  distance: 50,
                 },
               },
             },
           }}
         />
+      </div>
     );
   }
 }

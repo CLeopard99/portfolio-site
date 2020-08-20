@@ -8,10 +8,7 @@ class Skills extends Component {
   render() {
     return (
       <div id="skillSection">
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          animateOnce={true}
-        >
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
           <img src={SkillsImage} id="skillImage" alt="Skills Icon" />
           <h2>Skills Overview</h2>
           <p className="sectionBlurb">

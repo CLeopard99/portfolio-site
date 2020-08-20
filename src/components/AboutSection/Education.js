@@ -8,10 +8,7 @@ class Education extends Component {
   render() {
     return (
       <div id="educationSection">
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          animateOnce={true}
-        >
+        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
           <img src={EduImage} id="eduImage" alt="Education Icon" />
           <h2>Education</h2>
           <p className="sectionBlurb">

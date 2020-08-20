@@ -1,11 +1,11 @@
 import React from "react";
 import { Element } from "react-scroll";
 import NavBar from "./components/NavBar";
-import Home from "./components/HomeSection/Home";
-import About from "./components/AboutSection/About";
-import Projects from "./components/ProjectSection/Portfolio";
-import More from "./components/MoreSection/More";
-import Contact from "./components/ContactSection/Contact";
+import Home from "./components/HomeSection/Index";
+import About from "./components/AboutSection/Index";
+import Projects from "./components/ProjectSection/Index";
+import More from "./components/MoreSection/Index";
+import Contact from "./components/ContactSection/Index";
 
 // Main class used to render core components
 function App() {  
