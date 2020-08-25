@@ -26,7 +26,7 @@ class VideoButton extends Component {
           autoplay="false"
           onClose={() => this.setState({ isOpen: false })}
         />
-        <ScrollAnimation animateIn="slideInUp" animateOnce={true}>
+        <ScrollAnimation animateIn="slideInUp" animateOnce={true} >
           <a onClick={this.openModal}>Watch Demo</a>
         </ScrollAnimation>
       </div>

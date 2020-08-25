@@ -13,9 +13,7 @@ class Project extends Component {
             <p className="projectTech">
               <b>{this.props.tech}</b>
             </p>
-          </ScrollAnimation>
 
-          <ScrollAnimation animateIn="slideInLeft" animateOnce={true}>
             <p>{this.props.summary}</p>
 
             <img

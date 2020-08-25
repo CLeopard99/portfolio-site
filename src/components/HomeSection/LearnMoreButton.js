@@ -6,7 +6,7 @@ import { Animated } from "react-animated-css";
 class LearnMoreButton extends Component {
   render() {
     return (
-      <Animated animationIn="fadeInUp" animationInDelay="700">
+      <Animated animationIn="fadeInUp" animationInDelay="800">
         <div id="learnMoreButton">
           <Link
             exact

@@ -4,7 +4,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 class EmailButton extends Component {
   render() {
     return (
-      <ScrollAnimation animateIn="zoomIn" animateOnce={true}>
+      <ScrollAnimation animateIn="zoomIn" animateOnce={true} delay="200">
         <div id="emailButton">
           <a href="mailto:Charles.leopard@outlook.com">Get in touch</a>
         </div>

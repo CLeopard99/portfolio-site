@@ -1,6 +1,6 @@
 # React Portfolio Site
 
-This is my portfolio website, built with React and SCSS, developed to showcase my skills and experiement with React packages.
+This is my portfolio website, built with React and SCSS, developed to showcase my skills and experiment with React packages.
 This website is fully responsive and can be found at: https://charlieleopard.dev/.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

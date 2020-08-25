@@ -19,10 +19,10 @@ class ParticlesRender extends Component {
                 value: 0.8,
               },
               number: {
-                value: 120,
+                value: 100,
               },
               size: {
-                value: 3,
+                value: 4,
               },
               shape: {
                 type: "circle",
@@ -31,7 +31,7 @@ class ParticlesRender extends Component {
                 distance: 130,
                 color: "#0ABBDF",
                 opacity: 0.6,
-                width: 1,
+                width: 2,
               },
               move: {
                 direction: "none",
@@ -53,8 +53,8 @@ class ParticlesRender extends Component {
                 },
                 onhover: {
                   enable: true,
-                  mode: "repulse",
-                  distance: 50,
+                  mode: "grab",
+                  distance: 100,
                 },
               },
             },

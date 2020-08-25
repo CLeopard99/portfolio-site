@@ -9,7 +9,7 @@ class ContactHeader extends Component {
         <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
           <h2>Contact Me</h2>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay="100">
           <p id="contactLine">Have a question or want to hire me?</p>
         </ScrollAnimation>
       </>
