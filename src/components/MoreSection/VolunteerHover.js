@@ -26,7 +26,6 @@ class VolunteerHover extends Component {
               </p>
               <div className="divider" />
               <p>Enfield Food Bank volunteer</p>
-              <div className="divider" />
             </div>
           </div>
         </div>

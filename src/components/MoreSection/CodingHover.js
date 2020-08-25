@@ -27,7 +27,6 @@ class CodingHover extends Component {
               <p>
                 Broad Experience in various languages, technologies, and areas
               </p>
-              <div className="divider" />
             </div>
           </div>
         </div>

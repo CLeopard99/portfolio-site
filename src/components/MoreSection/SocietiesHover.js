@@ -24,7 +24,6 @@ class SocietiesHover extends Component {
               <p>
                 Member of Stu-Brew (student-run brewery) and computing societies
               </p>
-              <div className="divider" />
             </div>
           </div>
         </div>

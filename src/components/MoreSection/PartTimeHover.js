@@ -24,7 +24,6 @@ class PartTimeHover extends Component {
               <p>
                 Work experience at Enfield Dig-IT solutions (hardware repairs)
               </p>
-              <div className="divider" />
             </div>
           </div>
         </div>
