@@ -16,8 +16,9 @@
     "react-dom": "^16.13.1",
     "react-modal-video": "^1.2.5",
     "react-particles-js": "^3.3.0",
-    "react-scripts": "^3.4.2",
-    "react-scroll": "^1.8.0"
+    "react-scripts": "^3.4.3",
+    "react-scroll": "^1.8.0",
+    "serialize-javascript": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
