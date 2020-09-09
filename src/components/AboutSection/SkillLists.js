@@ -41,6 +41,7 @@ class SkillLists extends Component {
           <div>
             <SkillTab skill="Firebase" />
             <SkillTab skill="Git" />
+            <SkillTab skill="Heroku" />
             <SkillTab skill="VDM-SL" />
             <SkillTab skill="LAMP Stack" />
             <SkillTab skill="UX/UI Design" />

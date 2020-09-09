@@ -1,35 +1,59 @@
 # React Portfolio Site
 
-This is my portfolio website, built with React and SCSS, developed to showcase my skills and experiment with React packages.
-This website is fully responsive and can be found at: https://charlieleopard.dev/.
+This is my portfolio website, built with React and SCSS, developed to showcase my skills and projects as a software developer and experiment with React packages. This website is fully responsive and made for maintainability and reusability - it can be found at: [charlieleopard.dev](https://charlieleopard.dev/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-<br />
-Other packages used can be found in package.json.
+The website includes:
 
-## Available Scripts
+- Home-page: Introduction, link to pdf resume, shortcut buttons, and particle animation
 
-In the project directory, you can run:
+- About: Education section with accordion and skills section with skilltabs that are easy to add
 
-### `npm/yarn start`
+- Projects: Portfolio of projects with name, technologies, summary, examples, and buttons for github/video demo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-  
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- More: Section on other activities include photo collage, overlay windows, and interests list
 
-### `npm/yarn build`
+- Contact: Simple contact footer with email button
 
-Builds the app for production to the build folder.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is hosted using Firebase.
 
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Credits
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+[React-particles-js](https://www.npmjs.com/package/react-particles-js)
+
+[React-animate-on-scroll](https://www.npmjs.com/package/react-animate-on-scroll)
+
+[React-animated-css](https://www.npmjs.com/package/react-animated-css)
+
+[React-collapsible](https://www.npmjs.com/package/react-collapsible)
+
+[React-scroll](https://www.npmjs.com/package/react-scroll)
+
+[React-modal-video](https://www.npmjs.com/package/react-modal-video)
+
+[React-twitter-embed](https://www.npmjs.com/package/react-twitter-embed)
+
+[Node-SASS Library](https://www.npmjs.com/package/node-sass)
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## License
+
+```txt
+Copyright 2020 Charles Leopard
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   <http://www.apache.org/licenses/LICENSE-2.0>
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

@@ -67,6 +67,7 @@ ul.navBar {
       }
     }
   }
+
   padding: 0;
   float: left;
   margin-left: 75px;
@@ -220,6 +221,7 @@ ul.navBar {
   text-align: center;
   margin-bottom: 20px;
 }
+
 #skillSection {
   width: 50%;
   text-align: center;
@@ -334,10 +336,11 @@ ul.navBar {
   width: 100%;
   margin-top: 75px;
 
+
   p {
     width: 675px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     max-width: 75%;
   }
 }
@@ -351,13 +354,13 @@ ul.navBar {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 35px;
   margin-bottom: 100px;
 
   a {
     width: 100px;
     background-color: white;
-    border: #252934 2px solid;
+    border: #252934 3px solid;
     cursor: pointer;
     color: black;
     font-weight: bold;
@@ -369,6 +372,20 @@ ul.navBar {
     }
   }
 }
+
+#twitterBot {
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  img {
+    height: 350px;
+    margin: 20px 0px 0px 40px;
+
+  }
+}
+
 
 /****More section styles****/
 
@@ -543,12 +560,15 @@ hr {
 .pastelBlue {
   background-color: #add8e6;
 }
+
 .pastelGreen {
   background-color: #d8f7d8;
 }
+
 .pastelPink {
   background-color: #ffeffd;
 }
+
 .pastelOrange {
   background-color: #fbe5d6;
 }
@@ -684,7 +704,8 @@ hr {
 }
 
 /* IE10+ CSS */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
   #collageText {
     display: block;
     align-self: center;

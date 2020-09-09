@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 import Collage from "./Collage";
 import MoreIntro from "./MoreIntro";
 import HoverBoxes from "./HoverBoxes";
