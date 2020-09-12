@@ -11,10 +11,10 @@ class SkillLists extends Component {
             <h3>Languages</h3>
           </div>
           <div>
+            <SkillTab skill="JavaScript" />
             <SkillTab skill="Java" />
             <SkillTab skill="HTML" />
             <SkillTab skill="CSS" />
-            <SkillTab skill="JavaScript" />
             <SkillTab skill="SQL" />
             <SkillTab skill="C" />
           </div>
