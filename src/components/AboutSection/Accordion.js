@@ -6,6 +6,26 @@ class Accordion extends Component {
   render() {
     return (
       <div>
+         <Collapsible
+          classParentString="qualificationsAccordion"
+          trigger="MSc Advanced Computer Science"
+        >
+          <ul>
+            <li>Ongoing</li>
+            <li>
+              Newcastle University <br />
+              (UK Russel Group University)
+            </li>
+            <li>Oct 2020 - Sept 2021</li>
+            <li>
+              Dissertation title:{" "}
+              <i>
+                Coming soon.
+              </i>
+            </li>
+            <li>British Computer Society (BCS) Accredited</li>
+          </ul>
+        </Collapsible>
         <Collapsible
           classParentString="qualificationsAccordion"
           trigger="BSc (Hons) Computer Science"
@@ -17,7 +37,7 @@ class Accordion extends Component {
               Newcastle University <br />
               (UK Russel Group University)
             </li>
-            <li>Length: 3 years (Graduated June 2020)</li>
+            <li>Sept 2017 - July 2020</li>
             <li>
               Dissertation title:{" "}
               <i>
@@ -38,7 +58,7 @@ class Accordion extends Component {
               equivalent: A*A*A)
             </li>
             <li>Hertford Regional College</li>
-            <li>Length: 2 years (Completed June 2017)</li>
+            <li>Sept 2015 - July 2017</li>
           </ul>
         </Collapsible>
         <Collapsible
@@ -48,7 +68,7 @@ class Accordion extends Component {
           <ul>
             <li>Grades: 9 A*-B GCSEs</li>
             <li>Bishop Stopford's School Enfield</li>
-            <li>2010-2015</li>
+            <li>Sept 2010 - Aug 2015</li>
           </ul>
         </Collapsible>
       </div>
