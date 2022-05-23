@@ -55,17 +55,15 @@ jobs:
           command: npm run lint
 
   sonar:
-    working_directory: ~/repo
+    working_directory: .
     docker:
       - image: cimg/node:16.14
     steps:
       - checkout
       - attach_workspace:
-          at: ~/repo
-
+          at: . 
       - sonarcloud/scan:
           sonar_token_variable_name: PORTFOLIO_TOKEN
-
 
   deploy_to_staging:
     docker:
