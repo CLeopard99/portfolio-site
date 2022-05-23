@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.7
+  sonarcloud: sonarsource/sonarcloud@1.1.0
 
 jobs:
   build:
@@ -19,17 +20,17 @@ jobs:
       - save_cache:
           key: v1- dependencies-{{ checksum "package-lock.json" }}
           paths:
-           - node_modules
+            - node_modules
       - run:
           name: Build
           command: npm run build
       - persist_to_workspace:
           root: .
           paths:
-            - 'build'
+            - "build"
       - store_artifacts:
           path: ./build
-    
+
   test:
     docker:
       - image: cimg/node:16.14
@@ -41,12 +42,13 @@ jobs:
       - run:
           name: Run Tests
           command: npm test
-          
+
   eslint:
     docker:
       - image: cimg/node:16.14
     steps:
       - checkout
+      - sonarcloud/scan
       - restore_cache:
           keys:
             - v1- dependencies-{{ checksum "package-lock.json" }}
@@ -75,14 +77,14 @@ jobs:
           command: npx surge --project ./build --domain https://cleopard.surge.sh
 
 workflows:
-
   ci-pipeline:
     jobs:
       - build
       - test:
           requires:
-          - build
-      - eslint:
+            - build
+      - eslint:                
+          context: sonarcloud
           requires:
             - build
       - deploy_to_staging:
@@ -94,7 +96,7 @@ workflows:
               only: main
       - deploy_to_production:
           requires:
-                - deploy_to_staging
+            - deploy_to_staging
           filters:
             branches:
               only: main
