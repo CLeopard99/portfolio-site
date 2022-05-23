@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import HeaderCollage from "../../assets/collageHeader.png";
+import BackgroundImage from "../../assets/moreBackground.png";
 
 // Photo collage and header for MoreSection
 class Collage extends Component {
@@ -9,7 +9,7 @@ class Collage extends Component {
       <ScrollAnimation animateIn="slideInLeft" animateOnce={true}>
         <div id="collage">
           <img
-            src={HeaderCollage}
+            src={BackgroundImage}
             id="headerCollage"
             alt="Collage and header for more about me"
           />
