@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.1.2",
     "elliptic": "^6.5.4",
+    "eslint": "^8.16.0",
     "jest": "^28.1.0",
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",
@@ -24,7 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --runInBand",
+    "lint": "eslint src --max-warnings=0",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^27.5.1",
     "sass": "^1.52.1"
   }
 }

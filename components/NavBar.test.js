@@ -6,4 +6,4 @@ test("NavBar includes RetroFlect Name", () => {
   render(<NavBar />);
   const navigationBarTitle = screen.getByText(/Charlie Leopard/i);
   expect(navigationBarTitle).not.toBeNull;
-});
+})
