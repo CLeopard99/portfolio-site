@@ -10,7 +10,6 @@ jobs:
       - image: cimg/node:16.14
     steps:
       - checkout
-      - sonarcloud/scan
       - restore_cache:
           keys:
             - v1- dependencies-{{ checksum "package-lock.json" }}
@@ -55,6 +54,19 @@ jobs:
           name: Run ESLint
           command: npm run lint
 
+  sonar:
+    working_directory: ~/repo
+    docker:
+      - image: cimg/node:16.14
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo
+
+      - sonarcloud/scan:
+          sonar_token_variable_name: d610a7f392cb75520c7f8f1db2a465207789c9ed
+
+
   deploy_to_staging:
     docker:
       - image: cimg/node:16.14
@@ -79,14 +91,17 @@ workflows:
   ci-pipeline:
     jobs:
       - build          
-        context: sonarcloud
-
       - test:
           requires:
             - build
       - eslint:                
           requires:
             - build
+      - sonar:
+          requires:
+            - build
+            - test
+            - eslint
       - deploy_to_staging:
           requires:
             - test
