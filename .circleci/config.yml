@@ -64,7 +64,7 @@ jobs:
           at: ~/repo
 
       - sonarcloud/scan:
-          PORTFOLIO_TOKEN: d610a7f392cb75520c7f8f1db2a465207789c9ed
+          sonar_token_variable_name: PORTFOLIO_TOKEN
 
 
   deploy_to_staging:
