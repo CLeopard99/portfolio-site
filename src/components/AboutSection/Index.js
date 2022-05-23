@@ -3,7 +3,6 @@ import EducationSection from "./Education";
 import SkillSection from "./Skills";
 import AboutTitle from "./AboutTitle";
 
-// Index for AboutSection
 class AboutIndex extends Component {
   render() {
     return (

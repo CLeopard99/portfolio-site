@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SkillTab from "./SkillTab";
 
-// List of skills by category, using SkillTab to easily add new skills
 class SkillLists extends Component {
   render() {
     return (
