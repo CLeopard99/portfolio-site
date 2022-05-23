@@ -63,7 +63,7 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - sonarcloud/scan:
-          sonar_token_variable_name: PORTFOLIO_TOKEN
+          sonar_token_variable_name: SONAR_TOKEN
 
   deploy_to_staging:
     docker:
