@@ -7,7 +7,7 @@ class ProjectButton extends Component {
     return (
       <ScrollAnimation animateIn="slideInUp" animateOnce={true} >
         <div id="projectButton">
-          <a href={this.props.link}>View Code</a>
+          <button className="projectLink" href={this.props.link}>View Code</button>
         </div>
       </ScrollAnimation>
     );

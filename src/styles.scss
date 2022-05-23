@@ -357,8 +357,9 @@ ul.navBar {
   margin-top: 35px;
   margin-bottom: 100px;
 
-  a {
-    width: 100px;
+  .projectLink {
+    height: 50px;
+    width: 150px;
     background-color: white;
     border: #252934 3px solid;
     cursor: pointer;

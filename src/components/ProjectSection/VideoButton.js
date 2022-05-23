@@ -27,7 +27,7 @@ class VideoButton extends Component {
           onClose={() => this.setState({ isOpen: false })}
         />
         <ScrollAnimation animateIn="slideInUp" animateOnce={true} >
-          <a onClick={this.openModal}>Watch Demo</a>
+          <button className="projectLink" onClick={this.openModal}>Watch Demo</button>
         </ScrollAnimation>
       </div>
     );
