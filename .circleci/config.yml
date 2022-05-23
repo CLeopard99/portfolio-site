@@ -10,7 +10,7 @@ jobs:
       - image: cimg/node:16.14
     steps:
       - checkout
-
+      - sonarcloud/scan
       - restore_cache:
           keys:
             - v1- dependencies-{{ checksum "package-lock.json" }}
@@ -48,7 +48,6 @@ jobs:
       - image: cimg/node:16.14
     steps:
       - checkout
-      - sonarcloud/scan
       - restore_cache:
           keys:
             - v1- dependencies-{{ checksum "package-lock.json" }}
@@ -79,12 +78,13 @@ jobs:
 workflows:
   ci-pipeline:
     jobs:
-      - build
+      - build          
+        context: sonarcloud
+
       - test:
           requires:
             - build
       - eslint:                
-          context: sonarcloud
           requires:
             - build
       - deploy_to_staging:
