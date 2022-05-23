@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 
-// Button for linking projects to github
 class ProjectButton extends Component {
   render() {
     return (

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ModalVideo from "react-modal-video";
 import ScrollAnimation from "react-animate-on-scroll";
 
-// Button for linking projects to a demo video
 class VideoButton extends Component {
   constructor() {
     super();
