@@ -9,6 +9,7 @@
     "elliptic": "^6.5.4",
     "eslint": "^8.16.0",
     "jest": "^28.1.0",
+    "prettier": "^2.6.2",
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",
     "react-animated-css": "^1.2.1",
@@ -30,8 +31,15 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "ignorePatterns": [
+      "**/*.test.js"
+    ]
   },
+
   "browserslist": {
     "production": [
       ">0.2%",
