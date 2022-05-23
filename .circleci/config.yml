@@ -1,26 +1,100 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+orbs:
+  node: circleci/node@4.7
+
 jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+  build:
     docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+      - image: cimg/node:16.14
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+      - restore_cache:
+          keys:
+            - v1- dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install npm Dependencies
+          command: npm ci
+      - save_cache:
+          key: v1- dependencies-{{ checksum "package-lock.json" }}
+          paths:
+           - node_modules
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - 'build'
+      - store_artifacts:
+          path: ./build
+    
+  test:
+    docker:
+      - image: cimg/node:16.14
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1- dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Run Tests
+          command: npm test
+          
+  eslint:
+    docker:
+      - image: cimg/node:16.14
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1- dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Run ESLint
+          command: npm run lint
+
+  deploy_to_staging:
+    docker:
+      - image: cimg/node:16.14
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy to Surge
+          command: npx surge --project ./build --domain https://cleopard-staging.surge.sh
+
+  deploy_to_production:
+    docker:
+      - image: cimg/node:16.14
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy to Surge
+          command: npx surge --project ./build --domain https://cleopard.surge.sh
+
 workflows:
-  say-hello-workflow:
+
+  ci-pipeline:
     jobs:
-      - say-hello
+      - build
+      - test:
+          requires:
+          - build
+      - eslint:
+          requires:
+            - build
+      - deploy_to_staging:
+          requires:
+            - test
+            - eslint
+          filters:
+            branches:
+              only: main
+      - deploy_to_production:
+          requires:
+                - deploy_to_staging
+          filters:
+            branches:
+              only: main
