@@ -3,7 +3,6 @@ import Accordion from "./Accordion";
 import EduImage from "../../assets/educationImage.png";
 import ScrollAnimation from "react-animate-on-scroll";
 
-// Education section which renders accordion of education history
 class Education extends Component {
   render() {
     return (

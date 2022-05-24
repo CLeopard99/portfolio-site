@@ -16,8 +16,12 @@ class VideoButton extends Component {
   }
 
   render() {
+    console.log("Hi");
+    console.log("Hi");
     return (
       <div id="projectButton">
+        <div></div>
+
         <ModalVideo
           channel={this.props.channel}
           isOpen={this.state.isOpen}
@@ -25,8 +29,10 @@ class VideoButton extends Component {
           autoplay="false"
           onClose={() => this.setState({ isOpen: false })}
         />
-        <ScrollAnimation animateIn="slideInUp" animateOnce={true} >
-          <button className="projectLink" onClick={this.openModal}>Watch Demo</button>
+        <ScrollAnimation animateIn="slideInUp" animateOnce={true}>
+          <button className="projectLink" onClick={this.openModal}>
+            Watch Demo
+          </button>
         </ScrollAnimation>
       </div>
     );
