@@ -55,7 +55,6 @@ jobs:
           command: npm run lint
 
   sonar:
-    working_directory: .
     docker:
       - image: cimg/node:16.14
     steps:
