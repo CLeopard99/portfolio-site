@@ -53,6 +53,7 @@ jobs:
       - run:
           name: Run ESLint
           command: npm run lint
+      - sonar
 
   sonar:
     docker:
@@ -94,9 +95,7 @@ workflows:
       - eslint:                
           requires:
             - build
-      - sonar:
-          requires:
-            - build
+  
       - deploy_to_staging:
           requires:
             - test
